@@ -39,8 +39,8 @@ Rich panel 관리자 페이지(`/settings/rich_panel`)로 이동 하고 필요�
 #### 명령어
 |명령어|설명|
 |---------------|----------|
-| xeCache:clear | 캐시 삭제 |
+| cache:clear-xe | 캐시 삭제 |
 | plugin:install plugin_id={pluginName} | 자료실의 플러그인 설치 |
 | plugin:uninstall plugin_id={pluginName}| 설치된 플러그인 삭제 |
-| trans | Core 다국어 업데이트 |
-| trans name={pluginName} | 플러그인 다국어 업데이트 |
+| translation:import | Core 다국어 업데이트 |
+| translation:import name={pluginName} | 플러그인 다국어 업데이트 |
