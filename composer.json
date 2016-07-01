@@ -25,7 +25,7 @@
       "component": {
         "rich_panel/settingsSkin/rich_panel@settingsSkin": {
           "class": "Akasima\\RichPanel\\Skins\\SettingsSkin",
-          "name": "Rich panel 기본 스킨",
+          "name": "Rich panel basic skin",
           "description": "",
           "screenshot": []
         }

@@ -69,6 +69,7 @@ class Plugin extends AbstractPlugin
     public function install()
     {
         $this->createRichPanelTable();
+        $this->createFailedJobsTable();
 
         // implement code
 
