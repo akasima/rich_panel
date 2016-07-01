@@ -1,0 +1,40 @@
+{
+  "name": "xpressengine-plugin/rich_panel",
+  "description": "This Package is Xpressengine Plugin.",
+  "keywords": [
+    "xpressengine",
+    "plugin"
+  ],
+  "license": "LGPL-2.0",
+  "version": "0.1.0",
+  "type": "xpressengine-plugin",
+  "support": {
+    "email": "akasima@naver.com"
+  },
+  "authors": [
+    {
+      "name": "input your name",
+      "email": "akasima@naver.com",
+      "homepage": "",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "xpressengine": {
+      "title": "Rich panel",
+      "component": {
+        "rich_panel/settingsSkin/rich_panel@settingsSkin": {
+          "class": "Akasima\\RichPanel\\Skins\\SettingsSkin",
+          "name": "Rich panel 기본 스킨",
+          "description": "",
+          "screenshot": []
+        }
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Akasima\\RichPanel\\": "src/"
+    }
+  }
+}

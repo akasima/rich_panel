@@ -2,8 +2,6 @@
 관리자에 panel 을 통해 queue 에 실행할 명령어를 입력하도록 돕습니다.
 queue 는 rich_panel 드라이버를 추가해서 database 로 동작 되도록 했습니다.
 
-처리 완료 및
-
 서버에 접속해서 명령어 입력하는 일을 어려워하는 일반 사용자를 위해 제작되었습니다.
 서버 설정에 따라 파일 권한이나 여러 문제로 인해 명령어 사용에 문제가 발생할 수 있습니다.
 Rich Panel 을 사용하는데 발생하는 문제 및 데이터 유실에 대해 책임이 없습니다.
@@ -11,7 +9,7 @@ Rich Panel 을 사용하는데 발생하는 문제 및 데이터 유실에 대�
 ## Queue Listener 실행
 서버에 접속해서 아래 명령어 실행
 ```
-php artisan queue:listen rich_panel --timeout=0 &
+php artisan queue:listen rich_panel --timeout=0 --tries=3 &
 ```
 
 ## 설치
