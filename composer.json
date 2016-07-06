@@ -6,14 +6,14 @@
     "plugin"
   ],
   "license": "LGPL-2.0",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "xpressengine-plugin",
   "support": {
     "email": "akasima@naver.com"
   },
   "authors": [
     {
-      "name": "input your name",
+      "name": "akasima",
       "email": "akasima@naver.com",
       "homepage": "",
       "role": "Developer"
