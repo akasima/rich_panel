@@ -13,16 +13,6 @@ Rich Panel 을 사용하는데 발생하는 문제 및 데이터 유실에 대�
 XE3 CMS 에 사용되는 플러그인 입니다.
 https://xpressengine.io/plugins/detail/rich_panel
 
-#### 플러그인 설치
-`php artisan plugin:install rich_panel`
-
-
-## Queue Listener 실행
-서버에 접속해서 아래 명령어 실행
-```
-php artisan queue:listen rich_panel --timeout=0 --tries=3 &
-```
-
 
 
 
@@ -42,6 +32,16 @@ git clone https://github.com/akasima/rich_panel.git
 git rich_panel
 composer install
 ```
+
+
+
+
+## Queue Listener 실행
+서버에 접속해서 아래 명령어 실행
+```
+php artisan queue:listen rich_panel --timeout=0 --tries=3 &
+```
+
 
 
 

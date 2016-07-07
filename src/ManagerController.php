@@ -7,6 +7,7 @@ use Queue;
 use Artisan;
 use Mail;
 use Xpressengine\Http\Request;
+use Xpressengine\Site\Site;
 
 class ManagerController extends Controller
 {
@@ -43,12 +44,14 @@ class ManagerController extends Controller
 
         $queue = Queue::connection('rich_panel');
         $queue->push(function ($job) use ($command, $args) {
+            app('xe.site')->setCurrentSite(Site::find('default'));
+
             // send email 'queue ready'
             $data = [
                 'contents' => 'queue'
             ];
             $toMail = app('config')->get('mail.from.address');
-            Mail::send('emails.alarm', $data, function ($m) use ($toMail) {
+            Mail::send('emails.notice', $data, function ($m) use ($toMail) {
                 $fromEmail = app('config')->get('mail.from.address');
                 $applicationName = 'XE3';
 
@@ -62,7 +65,7 @@ class ManagerController extends Controller
             Artisan::call($command, $args);
 
             // send email 'complete'
-            Mail::send('emails.alarm', $data, function ($m) use ($toMail) {
+            Mail::send('emails.notice', $data, function ($m) use ($toMail) {
                 $fromEmail = app('config')->get('mail.from.address');
                 $applicationName = 'XE3';
 
